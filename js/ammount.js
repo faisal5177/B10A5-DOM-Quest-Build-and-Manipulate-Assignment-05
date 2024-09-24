@@ -1,28 +1,26 @@
-document.getElementById('btn-add-money').addEventListener('click', function(event) {
-    event.preventDefault();
-    const addMoneyInput = document.getElementById('input-add-money').value;
-    const addMoneyNumber = parseFloat(addMoneyInput);
-    
-    if (!isNaN(addMoneyNumber) && addMoneyNumber > 0) {
-        const balanceNavbar = document.getElementById('account-balance-navbar').innerText.replace(' BDT', '');
-        const balanceForm = document.getElementById('account-balance-form').innerText.replace(' BDT', '');
-        const balanceNumber = parseFloat(balanceNavbar);
-        const newBalance = addMoneyNumber + balanceNumber;
-        
-        document.getElementById('account-balance-navbar').innerText = newBalance + ' BDT';
-        document.getElementById('account-balance-form').innerText = newBalance + ' BDT';
-        
-        // Show success alert
-        document.getElementById('custom-alert').classList.remove('hidden');
-        document.getElementById('alert-title').innerText = 'Congrates';
-        document.getElementById('alert-image').src = 'image/coin (1).png';
-        document.getElementById('alert-text').innerText = 'You Have Donated for Humankind';
-        document.getElementById('alert-message-title').innerText = 'Successfully';
-    } else {
-        alert('Invalid Donation Amount');
-    }
-});
+let totalDonations = 0;
 
-document.getElementById('alert-close').addEventListener('click', function() {
-    document.getElementById('custom-alert').classList.add('hidden');
-});
+function handleDonation() {
+    const inputAddMoney = document.getElementById('input-add-money');
+    const showCashAddMoney = document.querySelector('.show-cash-add-money');
+    const showCashOutMoney = document.getElementById('show-cash-out-money');
+
+    let donationAmount = parseFloat(inputAddMoney.value);
+    let currentBalance = parseFloat(showCashOutMoney.textContent);
+
+    if (isNaN(donationAmount) || donationAmount <= 0) {
+        alert('Please enter a positive number for the donation amount.');
+        return;
+    }
+
+    // Update the total donations
+    totalDonations += donationAmount;
+
+    // Update the displayed values
+    showCashAddMoney.textContent = totalDonations.toFixed(2);
+    showCashOutMoney.textContent = (currentBalance - donationAmount).toFixed(2);
+
+    // Show the modal
+    document.getElementById('my_modal_5').showModal();
+}
+//Donate for Flood at Noakhali end

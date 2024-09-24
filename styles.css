@@ -1,8 +1,11 @@
- .small-btn {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-  }
+.bg-custom {
+  background-color: #B4F461;
+}
+#input-add-money {
+  padding: 10px; /* Adjust the value as needed */
+}
 
-  .btn-color {
-    background-color:#B4F461;
-  }
+.modal-action {
+  display: flex;
+  justify-content: center;
+}
