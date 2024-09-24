@@ -9,7 +9,7 @@ function handleDonation() {
     let currentBalance = parseFloat(showCashOutMoney.textContent);
 
     if (isNaN(donationAmount) || donationAmount <= 0) {
-        alert('Please enter a positive number for the donation amount.');
+        alert('Invalid Donation Amount');
         return;
     }
 
