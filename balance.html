@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>B10A5-DOM-Quest-Build-and-Manipulate-Assignment-05</title>
+    
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                        }
+                    }
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+   <header>
+        <div>
+            <div class="navbar bg-base-100 border rounded-xl shadow-xl bg-[#FFEEE6]">
+                <div class="navbar-start">
+                    <a role="button" class="btn btn-color px-7">Blog</a>
+                </div>
+                <div class="navbar-center">
+                    <img src="image/logo copy.png" alt="">
+                    <h1 class="font-bold text-lg">Donate Bangladesh</h1>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn">
+                        <img src="image/coin (1).png" alt="">
+                        <div id="account-balance-navbar" class="stat-value small-btn">5500 BDT</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--Banner-->
+        <div class="mt-5 mx-auto border rounded-lg shadow-lg bg-white p-7">
+            <button class="btn rounded-md btn-color">Donation</button>
+            <button class="btn rounded-md btn-color">History</button>
+        </div>
+   </header>
+   <main class="border rounded-lg shadow-lg bg-white">
+    <!--Card 1-->
+    <section class="border rounded-lg shadow-lg bg-white mb-24">
+        <div class="card lg:card-side bg-base-100 shadow-xl">
+            <figure>
+                <img
+                  src="image/noakhali.png"
+                  alt="noakhali" />
+            </figur>
+            <form class="card-body">
+                <div class="form-control">
+                    <a class="btn mb-5 mx-auto">
+                        <img src="image/coin (1).png" alt="">
+                        <div id="account-balance-form" class="stat-value small-btn">5500 BDT</div>
+                    </a>
+                     <div>
+                        <div class="card-body">
+                        <h1 class="card-title font-bold mb-5">Donate for Flood at Noakhali, Bangladesh</h1>
+                        <p class="mb-5 text-sm"> The recent floods in Noakhali have caused significant damage to homes
+                            infrastructure. Your donation will help provide essential supplies and to those affected by this
+                            disaster. Every contribution, big or small, makes difference. Please join us in supporting the
+                            relief efforts and making a positive impact on the lives of those in need.</p>
+                     </div>
+                     <div>
+                        <div class="card-actions mx-auto p-5 mb-5 justify-end">
+                            <input id="input-add-money" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered grow" autocomplete="off" required />
+                        </div> 
+                        <div class="form-control">
+                            <button id="btn-add-money" class="font-bold btn-color p-5 rounded-lg">Donation</button>
+                        </div> 
+                     </div>
+                 </div>
+            </form>
+            <div id="custom-alert" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+                <div class="bg-white p-5 rounded-lg text-center">
+                    <div id="alert-icon" class="text-4xl mb-4">
+                        <h1 id="alert-title" class="font-bold text-lg">Congrates</h1>
+                        <img id="alert-image" class="mx-auto mt-5" src="image/coin (1).png" alt="">
+                    </div>
+                    <div id="alert-message" class="text-md mb-4">
+                        <p id="alert-text" class="text">You Have Donated for Humankind</p>
+                        <h1 id="alert-message-title" class="font-bold">Successfully</h1>
+                    </div>
+                    <button id="alert-close" class="btn btn-primary justify-center">Close Confirmation</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--Card 2-->
+    <section class="border rounded-lg shadow-lg bg-white">
+
+    </section>
+    <!--card 3-->
+    <section class="border rounded-lg shadow-lg bg-white">
+
+    </section>
+   </main> 
+   <!--Js Link-->
+   <script src="js/ammount.js"></script>
+</body>
+</html>
