@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="navber">
+            <div class="navbar bg-base-100 bg-[#FFEEE6] px-2 py-2">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden"></div>
+                    </div>
+                    <a onclick="home()" class="btn btn-ghost bg-[#B4F461] px-5 ml-5 font-bold text-xl"  href="index.html">Home</a>
+                </div>
+                <div class="navbar-center">
+                    <img class="mr-2" src="image/logo copy.png" alt="">
+                    <h1 class="font-bold text-lg ml-2">Donate Bangladesh</h1>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn rounded-lg bg-[#FFEEE6] text-lg mr-20">
+                        <img src="image/coin (1).png" alt="">
+                        <div id="show-cash-out-money">5500</div> BDT
+                    </a>
+                </div>
+            </div>
+        </div>
+     </header>
+<main>
+    <div class="border rounded-lg shadow-lg bg-white mb-5">
+      <h2 class="font-bold text-2xl mt-5 ml-2">Important FAQ </h2>
+      <br>
+      <div class="border rounded-lg shadow-lg bg-white mb-5 p-5">
+        <h2 class="font-bold mb-3 text-lg">What is the Document Object Model (DOM)?</h2>
+        <p class="mb-5">The Document Object Model dom is a programming interface used for web documents. It represents the structure and content of a web page, allowing programs to change the document’s structure, style, and content. The DOM represents a document as nodes and objects, enabling programming languages to interact with the page.</p>
+      </div>
+        <div class="border rounded-lg shadow-lg bg-white mb-5 p-5"> 
+          <h2 class="font-bold mb-3 text-lg">How do you select an element from the DOM?</h2>
+          <p class="mb-5">1.getElementById(): Used to select the element with a specific id.
+
+            2.getElementsByClassName(): Used to select all elements with a specific class name.
+            
+            3.getElementsByTagName(): Used to select all elements with a specific tag name.
+            
+            4.querySelector(): Used to select the first matching element, which uses CSS selectors.
+            
+            5.querySelectorAll(): Used to select all matching elements, which uses CSS selectors.</p>
+        </div>
+        <div class="border rounded-lg shadow-lg bg-white mb-5 p-5">
+           <h2 class="font-bold mb-3 text-lg">What is event delegation in the context of the DOM, and why is it useful?</h2>
+           <p class="mb-5">Event delegation is a technique in JavaScript that allows you to handle events at a higher level in the DOM tree rather than directly on the element that triggers the event. This is achieved by taking advantage of event bubbling, where an event propagates from the target element up through its ancestors.
+            <br>
+            How It Works:
+             Instead of adding an event listener to each individual element, you add a single event listener to a parent element. This listener can then manage all events that bubble up from its child elements.
+             <br>
+             Benefits:
+             Efficiency: Reduces the number of event listeners, which can improve performance, especially with many elements.
+             Simplicity: Simplifies code management by centralizing event handling.
+             Dynamic Content: Easily handles events for dynamically added elements without needing to attach new event listeners. 
+        </p>
+        </div>
+        <div class="border rounded-lg shadow-lg bg-white mb-5 p-5">
+          <h2 class="font-bold mb-3 text-lg">How do you manipulate an element's attributes and styles using the DOM?</h2>
+          <p class="mb-5">Changing Attributes
+
+            Setting an Attribute: You can set an element’s attribute using element.setAttribute('attributeName', 'value'). Example: element.setAttribute('src', 'image.jpg')
+            
+            Getting an Attribute: You can get the value of an element’s attribute using element.getAttribute('attributeName'). Example: element.getAttribute('src')
+            
+            Changing Styles
+            
+            Setting a Style: You can change a specific CSS property of an element using element.style.propertyName = 'value'. Example: element.style.color = 'red'
+            
+            Adding/Removing Classes: You can add a class using element.classList.add('className'). You can remove a class using element.classList.remove('className'). Example: element.classList.add('active')
+            
+            Using these methods, you can easily change the attributes and styles of elements through the DOM.</p>
+        </div>
+</main>
+    <script src="js/amount.js"></script>
+</body>
+</html>

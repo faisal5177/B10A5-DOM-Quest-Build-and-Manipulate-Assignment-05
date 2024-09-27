@@ -38,10 +38,17 @@
                     <img class="mr-2" src="image/logo copy.png" alt="">
                     <h1 class="font-bold text-lg ml-2">Donate Bangladesh</h1>
                 </div>
+                <!---Results-->
+                <div
+                id="results"
+                class="hidden"
+                >
+
+                </div>
                 <div class="navbar-end">
                     <a class="btn rounded-lg bg-[#FFEEE6] text-lg mr-20">
-                        <img src="image/coin (1).png" alt="">
-                        <div id="show-cash-out-money">5500</div> BDT
+                        <img src="image/coin.png" alt="">
+                        <div id="total-expenses">5500</div> BDT
                     </a>
                 </div>
             </div>
@@ -61,7 +68,7 @@
                         <img src="image/noakhali.png" class="max-w-md rounded-lg shadow-2xl w-5/6 h-5/6" />
                         <div class=" mx-5">
                             <div class="navbar-end">
-                                <a class="btn rounded-lg text-lg mr-20"><img src="image/coin (1).png" alt=""> <div class="show-cash-add-money">00</div>
+                                <a class="btn rounded-lg text-lg mr-20"><img src="image/coin.png" alt=""> <div id="cash-added">00</div>
                                     BDT</a>
                             </div>
                             <h1 class="text-xl font-bold mt-3">Donate for Flood at Noakhali, Bangladesh</h1>
@@ -73,13 +80,13 @@
                                 need.
                             </p>
                             <div>
-                                <input id="input-add-money" type="text" placeholder="Write Donation Amount" class="input input-bordered grow mb-3 w-full" autocomplete="off" required />
+                                <input id="amount" type="text" placeholder="Write Donation Amount" class="input input-bordered grow mb-3 w-full" autocomplete="off" required />
                             </div>
-                            <button class="btn bg-custom w-full" onclick="handleDonation()">Donate Now</button>
+                            <button id="donate-button" class="btn bg-custom w-full" onclick="donation()">Donate Now</button>
                             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle flex justify-center items-center">
                                 <div class="modal-box text-center">
                                     <h3 class="text-lg font-bold mb-3">Congrats!</h3>
-                                    <img class="mx-auto" src="image/coin (1).png" alt="">
+                                    <img class="mx-auto" src="image/coin.png" alt="">
                                     <p class="py-2">You Have Donated for Humankind</p>
                                     <h1 class="font-bold">Successfully</h1>
                                     <div class="modal-action">
@@ -104,7 +111,7 @@
 
         </section>
     </main>
-    <script src="js/ammount.js"></script>
+    <script src="js/donate.js"></script>
 </body>
 
 </html>
