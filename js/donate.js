@@ -1,5 +1,5 @@
 let totalDonationsNoakhali = 0;
-let totalDonationsFeni = 660;
+let totalDonationsFeni = 600;
 let totalDonationsInjured = 2400;
 
 // Donate for Flood at Noakhali, Bangladesh
@@ -8,6 +8,11 @@ function donationNoakhali() {
     const totalExpenses = parseFloat(totalExpensesElement.textContent);
     const donationAmount = parseFloat(document.getElementById('amount').value);
     const cashAddedElement = document.getElementById('cash-added');
+
+    if (donationAmount < 0) {
+        alert('Invalid Donation Amount');
+        return;
+    }
 
     const newTotal = totalExpenses - donationAmount;
 
@@ -28,7 +33,7 @@ function donationNoakhali() {
             alert('Modal element not found or showModal method not supported.');
         }
     } else {
-        alert('Donation amount exceeds total expenses.');
+        alert('Invalid Donation Amount');
     }
 }
 
@@ -38,6 +43,11 @@ function donationFeni() {
     const totalExpenses = parseFloat(totalExpensesElement.textContent) || 0;
     const donationAmount = parseFloat(document.getElementById('amount-feni').value) || 0;
     const cashAddedFeniElement = document.getElementById('feni-cash-added');
+
+    if (donationAmount < 0) {
+        alert('Invalid Donation Amount');
+        return;
+    }
 
     const newTotal = totalExpenses - donationAmount;
 
@@ -58,7 +68,7 @@ function donationFeni() {
             alert('Modal element not found or showModal method not supported.');
         }
     } else {
-        alert('Donation amount exceeds total expenses.');
+        alert('Invalid Donation Amount');
     }
 }
 
@@ -68,6 +78,11 @@ function donationInjuredButton() {
     const totalExpenses = parseFloat(totalExpensesElement.textContent) || 0;
     const amountInjured = parseFloat(document.getElementById('amount-injured').value) || 0;
     const injuredCashAddedElement = document.getElementById('injured-cash-added');
+
+    if (amountInjured < 0) {
+        alert('Invalid Donation Amount');
+        return;
+    }
 
     const newTotal = totalExpenses - amountInjured;
 
@@ -88,10 +103,9 @@ function donationInjuredButton() {
             alert('Modal element not found or showModal method not supported.');
         }
     } else {
-        alert('Donation amount exceeds total expenses.');
+        alert('Invalid Donation Amount');
     }
 }
-
 
 document.getElementById('feni-button').onclick = donationFeni;
 document.getElementById('noakhali-button').onclick = donationNoakhali;
