@@ -38,13 +38,6 @@
                     <img class="mr-2" src="image/logo.png" alt="">
                     <h1 class="font-bold text-lg ml-2">Donate Bangladesh</h1>
                 </div>
-                <!---Results-->
-                <div
-                id="results"
-                class="hidden"
-                >
-
-                </div>
                 <div class="navbar-end">
                     <a class="btn rounded-lg bg-[#FFEEE6] text-lg mr-20">
                         <img src="image/coin.png" alt="">
@@ -56,7 +49,14 @@
         <!--Banner section-->
         <div class="flex justify-center my-3">
             <button class="btn bg-[#B4F461] text-xl gap-5 mr-2" onclick="home()">Donation</button>
-            <button class="btn text-xl gap-5 ml-2">History</button>
+            <!--History Section-->
+            <div>
+                <button class="btn text-xl gap-5 ml-2" onclick="toggleHistory()">History</button>
+                <div id="history-section" class="bg-gradient-to-br hidden border p-4 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-4 text-center bg-clip-text bg-gradient-to-r"></h3>
+                    <div id="history-list"></div>
+                </div>
+            </div>
         </div>
     </heade>
     <main>
@@ -71,7 +71,7 @@
                                 <a class="btn rounded-lg text-lg mr-20"><img src="image/coin.png" alt=""> <div id="cash-added">00</div>
                                     BDT</a>
                             </div>
-                            <h1 class="text-xl font-bold mt-3">Donate for Flood at Noakhali, Bangladesh</h1>
+                            <h1 id="amount-title" class="text-xl font-bold mt-3">Donate for Flood at Noakhali, Bangladesh</h1>
                             <p class="py-6 text-sm">
                                 The recent floods in Noakhali have caused significant damage to homes infrastructure.
                                 Your donation will help provide essential supplies and to those affected by this
@@ -91,7 +91,7 @@
                                     <h1 class="font-bold">Successfully</h1>
                                     <div class="modal-action">
                                         <form method="dialog">
-                                            <button class="btn">Close Confirmation</button>
+                                            <button class="btn" onclick="handleAddHistory()">Close Confirmation</button>
                                         </form>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@
                             <div class="navbar-end-feni">
                                 <a class="btn rounded-lg text-lg mr-20"><img src="image/coin.png" alt=""> <div id="feni-cash-added">600</div> BDT</a>
                             </div>
-                            <h1 class="text-xl font-bold mt-3">Donate for Flood Relief in Feni, Bangladesh</h1>
+                            <h1 id="amount-feni-title" class="text-xl font-bold mt-3">Donate for Flood Relief in Feni, Bangladesh</h1>
                             <p class="py-6 text-sm">
                                 The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                             </p>
@@ -128,7 +128,7 @@
                                     <h1 class="font-bold">Successfully</h1>
                                     <div class="modal-action">
                                         <form method="dialog">
-                                            <button class="btn">Close Confirmation</button>
+                                            <button class="btn" onclick="handleAddHistory()">Close Confirmation</button>
                                         </form>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@
                                     <div id="injured-cash-added">2400</div> BDT
                                 </a>
                             </div>
-                            <h1 class="text-xl font-bold mt-3">Aid for Injured in the Quota Movement</h1>
+                            <h1 id="injured-title " class="text-xl font-bold mt-3">Aid for Injured in the Quota Movement</h1>
                             <p class="py-6 text-sm">
                                 The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                             </p>
@@ -167,7 +167,7 @@
                                     <h1 class="font-bold">Successfully</h1>
                                     <div class="modal-action">
                                         <form method="dialog">
-                                            <button class="btn">Close Confirmation</button>
+                                            <button class="btn" onclick="handleAddHistory()">Close Confirmation</button>
                                         </form>
                                     </div>
                                 </div>

@@ -29,23 +29,54 @@ function donationNoakhali() {
         } else {
             alert('Modal element not found or showModal method not supported.');
         }
-        
-        // History
-        const historyItem = document.createElement("div");
-        historyItem.className = "bg-white p-5 rounded-lg border-lg shadow-lg";
-        historyItem.innerHTML = `
-            <p class="text-xs">${new Date().toLocaleDateString()}</p>
-            <p class="text-xs">${new Date().toLocaleTimeString()}</p>
-            <p class="text-xs">Income: ${fincome.toFixed(2)}</p>
-            <p class="text-xs">Expenses: ${ftotalExpenses.toFixed(2)}</p>
-            <p class="text-xs">Balance: ${balance.toFixed(2)}</p>
-        `;
-        const historyContainer = document.getElementById("history-list");
-        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
-    } else {
+    }
+     else {
         alert('Invalid Donation Amount');
     }
 }
+ // History
+ function addHistory(amount, title, Fenititle, injured) {
+    const historyItem = document.createElement("div");
+    historyItem.className = "bg-white p-5 rounded-lg border-lg shadow-lg";
+    historyItem.innerHTML = `
+        <p class="text-xs">${new Date().toLocaleDateString()}</p>
+        <p class="text-xs">${new Date().toLocaleTimeString()}</p>
+        <p class="text-xs">Title: ${title}</p>
+        <p class="text-xs">Fenititle: ${Fenititle}</p>
+        <p class="text-xs">Injured: ${injured}</p>
+        <p class="text-xs">Amount Donated: ${amount.toFixed(2)}</p>
+    `;
+    const historyContainer = document.getElementById("history-list");
+    if (historyContainer) {
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+    } else {
+        console.error("Element with ID 'history-list' not found.");
+    }
+}
+
+function handleAddHistory() {
+    const amount = parseFloat(document.getElementById("amount").value);
+    const title = document.getElementById("amount-title").innerText;
+    const Fenititle = document.getElementById("amount-feni-title").innerText;
+    const injured = document.getElementById("amount-injured").value;
+
+    if (!isNaN(amount) && title && Fenititle && injured) {
+        addHistory(amount, title, Fenititle, injured);
+    } else {
+        console.error("Invalid input values.");
+    }
+}
+
+function toggleHistory() {
+    const historySection = document.getElementById("history-section");
+    if (historySection) {
+        historySection.classList.toggle("hidden");
+        console.log("History section toggled.");
+    } else {
+        console.error("Element with ID 'history-section' not found.");
+    }
+}
+
 
 // Donate for Flood Relief in Feni, Bangladesh
 function donationFeni() {
