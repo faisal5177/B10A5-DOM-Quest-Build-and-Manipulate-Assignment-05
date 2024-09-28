@@ -35,7 +35,7 @@
                     <a class="btn btn-ghost bg-[#B4F461] px-5 ml-5 font-bold text-xl">Blog</a>
                 </div>
                 <div class="navbar-center">
-                    <img class="mr-2" src="image/logo copy.png" alt="">
+                    <img class="mr-2" src="image/logo.png" alt="">
                     <h1 class="font-bold text-lg ml-2">Donate Bangladesh</h1>
                 </div>
                 <!---Results-->
@@ -48,7 +48,7 @@
                 <div class="navbar-end">
                     <a class="btn rounded-lg bg-[#FFEEE6] text-lg mr-20">
                         <img src="image/coin.png" alt="">
-                        <div id="total-expenses">5500</div> BDT
+                        <div id="expenses">5500</div> BDT
                     </a>
                 </div>
             </div>
@@ -104,12 +104,80 @@
         </section>
         <!--card 2-->
         <section>
-
+            <div>
+                <div class="hero bg-base-200 md-h-screen mt-3">
+                    <div class="hero-content flex-col lg:flex-row border rounded-lg shadow-lg bg-white">
+                        <img src="image/feni.png" class="max-w-md rounded-lg shadow-2xl w-5/6 h-5/6" />
+                        <div class=" mx-5">
+                            <div class="navbar-end-feni">
+                                <a class="btn rounded-lg text-lg mr-20"><img src="image/coin.png" alt=""> <div id="feni-cash-added">600</div> BDT</a>
+                            </div>
+                            <h1 class="text-xl font-bold mt-3">Donate for Flood Relief in Feni, Bangladesh</h1>
+                            <p class="py-6 text-sm">
+                                The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+                            </p>
+                            <div>
+                                <input id="amount-feni" type="text" placeholder="Write Donation Amount" class="input input-bordered grow mb-3 w-full" autocomplete="off" required />
+                            </div>
+                            <button id="feni-button" class="btn bg-custom w-full" onclick="feni()">Donate Now</button>
+                            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle flex justify-center items-center">
+                                <div class="modal-box text-center">
+                                    <h3 class="text-lg font-bold mb-3">Congrats!</h3>
+                                    <img class="mx-auto" src="image/coin.png" alt="">
+                                    <p class="py-2">You Have Donated for Humankind</p>
+                                    <h1 class="font-bold">Successfully</h1>
+                                    <div class="modal-action">
+                                        <form method="dialog">
+                                            <button class="btn">Close Confirmation</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!--card 3-->
         <section>
-
+            <div>
+                <div class="hero bg-base-200 md-h-screen mt-3">
+                    <div class="hero-content flex-col lg:flex-row border rounded-lg shadow-lg bg-white">
+                        <img src="image/quota-protest.png" class="max-w-md rounded-lg shadow-2xl w-5/6 h-5/6" />
+                        <div class="mx-5">
+                            <div class="navbar-end">
+                                <a class="btn rounded-lg text-lg mr-20">
+                                    <img src="image/coin.png" alt="">
+                                    <div id="injured-cash-added">2400</div> BDT
+                                </a>
+                            </div>
+                            <h1 class="text-xl font-bold mt-3">Aid for Injured in the Quota Movement</h1>
+                            <p class="py-6 text-sm">
+                                The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                            </p>
+                            <div>
+                                <input id="amount-injured" type="text" placeholder="Write Donation Amount" class="input input-bordered grow mb-3 w-full" autocomplete="off" required />
+                            </div>
+                            <button id="injured-button" class="btn bg-custom w-full">Donate Now</button>
+                            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle flex justify-center items-center">
+                                <div class="modal-box text-center">
+                                    <h3 class="text-lg font-bold mb-3">Congrats!</h3>
+                                    <img class="mx-auto" src="image/coin.png" alt="">
+                                    <p class="py-2">You Have Donated for Humankind</p>
+                                    <h1 class="font-bold">Successfully</h1>
+                                    <div class="modal-action">
+                                        <form method="dialog">
+                                            <button class="btn">Close Confirmation</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        
     </main>
     <script src="js/donate.js"></script>
 </body>
